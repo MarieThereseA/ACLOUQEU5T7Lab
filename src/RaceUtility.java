@@ -9,10 +9,15 @@ public class RaceUtility {
     }
 
     public static String makeProper(String str){
-        for (int i = 0; i <= str.length() - 1; i++){
-            String lttr
-            str = str.substring(0,1);
-            if (str.substring())
+        String proper = str.substring(0,1).toUpperCase();
+        for (int i = 1; i <= str.length() - 1; i++){
+            String lttr = str.substring(i,i+1);
+            if (!str.substring(i-1,i).equals(" ")){
+                proper += lttr.toLowerCase();
+            }else{
+                proper += lttr.toUpperCase();
+            }
         }
+        return proper;
     }
 }
